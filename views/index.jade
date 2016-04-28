@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h2= title
+  if rooms
+    form(action='/join' method='post')
+      for room in rooms
+        input(type='radio' name='room_name' value= room)
+        | #{room}
+      br
+    a.btn.btn-primary(href='/join') Join
+  else
+      p There is no room.
+  br
+  a.btn.btn-primary(href='/create') Create

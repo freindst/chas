@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  form(action='/create', method='post')
+    .input-group
+      label Room Name
+      br
+      input(type='text' name='room_name')
+    .input-group
+      label Room Size
+      br
+      input(type='number' name='room_size')
+    input.btn.btn-primary(type='submit' value='Next')

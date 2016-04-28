@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  form(action='/set_player_name/#{room_name}' method='post')
+    .input-group
+      label Player Name
+      br
+      input(type='text' name='player_name')
+
+    input(type='submit' value='Next')
+
